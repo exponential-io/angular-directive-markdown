@@ -1,23 +1,29 @@
-# angular-markdown-directive
-Bower Component for a simple AngularJS Markdown directive using [Showdown](https://github.com/coreyti/showdown). Based on [this excellent tutorial](http://blog.angularjs.org/2012/05/custom-components-part-1.html) by [@johnlinquist](https://twitter.com/johnlindquist).
+# angular-directive-markdown
+Forked from https://github.com/btford/angular-markdown-directive.
 
 ## Usage
-1. `bower install angular-markdown-directive`
-2. Made sure the showdown lib is loaded. It should be installed as a dependency at `components/showdown/compressed/showdown.js`.
-3. Include the `markdown.js` script provided by this component into your app.
-4. Add `btford.markdown` as a module dependency to your app.
-5. Insert the `btf-markdown` directive into your template:
+1. `bower install angular-directive-markdown`
+2. `bower install showdown`
+3. Include showdown and angular-directive-markdown in  your .html file.
 
 ```html
-<btf-markdown>   
+<script type="text/javascript" src="bower_components/compressed/showdown/showdown.js"></script>
+<script type="text/javascript" src="bower_components/lib/angular-directive-markdown/markdown.js"></script>
+```
+
+4. Add `exp.markdown` as a module dependency to your app.
+5. Insert the `exp-markdown` directive into your template:
+
+```html
+<exp-markdown>   
      #Markdown directive   
      *It works!*  
-</btf-markdown>
+</exp-markdown>
 ```
 You can also bind the markdown input to a scope variable:
 
 ```html
-<div btf-markdown="markdown"> 
+<div exp-markdown="markdown"> 
 </div>
 <!-- Uses $scope.markdown -->
 ```
