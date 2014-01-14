@@ -12,8 +12,8 @@ angular.module('exp.markdown', []).
         return {
             restrict: 'AE',
             link: function (scope, element, attrs) {
-                if (attrs.btfMarkdown) {
-                    scope.$watch(attrs.btfMarkdown, function (newVal) {
+                if (attrs.expMarkdown) {
+                    scope.$watch(attrs.expMarkdown, function (newVal) {
                         var html = newVal ? converter.makeHtml(newVal) : '';
                         element.html(html);
                     });
